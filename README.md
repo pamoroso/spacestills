@@ -6,20 +6,20 @@ Spacestills is a Python program for viewing NASA TV still frames. It periodicall
 
 The program allows to correct the aspect ratio of the frames and save them. It downloads the latest frame automatically and gives the option to reload manually, disable the automatic reload, or change the download frequency.
 
-Spacestills has a GUI based on the [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/) framework.
+Spacestills has a GUI based on the [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/) framework. More implementation details are in a blog post that discusses the [design of Spacestills](https://blog.paoloamoroso.com/2021/04/a-nasa-tv-still-frame-viewer-in-python.html).
 
 
 ## Installation 
 
-Download the distribution archive from the [project's site](https://github.com/pamoroso/spacestills) and expand it. All you need is the `main.py` file, which you can copy anywhere in the file system.
+Download the [release archive](https://github.com/pamoroso/spacestills/releases) from the [project's site](https://github.com/pamoroso/spacestills) and expand it. All you need is the `main.py` file, which you can copy anywhere in the file system.
 
 ## Usage
 
 ### Running on Replit
 
-To run the program online on Replit visit the [Spacestills REPL](https://replit.com/@PaoloAmoroso/spacestills) with a browser and click `Run`.
+To run the program online on Replit visit the [Spacestills REPL](https://replit.com/@PaoloAmoroso/spacestills) with a browser and click `Run`. If the program window is cropped, try marking the checkbox `Correct aspect ratio`.
 
-If the program window is cropped, adjust the size of the X Window desktop pane. You may see screen redraw artifacts when moving the window. To force a refresh and fix the issue restart the window manager by right-clicking on the X desktop and then clicking `Restart`.
+You can also adjust the size of the X Window desktop pane when running Spacestills directly in a REPL. You may see screen redraw artifacts when dragging the window on the desktop. To force a refresh and fix the issue, restart the window manager by right-clicking on the X desktop and then clicking `Restart`.
 
 
 ### Running elsewhere
