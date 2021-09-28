@@ -1,17 +1,22 @@
 # Spacestills
 
-Spacestills is a Python program for viewing NASA TV still frames. It periodically downloads the frames from a [web feed](https://science.ksc.nasa.gov/shuttle/countdown/video/chan2large.jpg) and displays them in a GUI.
+[Spacestills](https://github.com/pamoroso/spacestills) is a Python program for viewing NASA TV still frames. It periodically downloads the frames from a [web feed](https://science.ksc.nasa.gov/shuttle/countdown/video/chan2large.jpg) and displays them in a GUI.
 
-![Spacestills main window](spacestills.jpg)
+![Spacestills main window](https://raw.githubusercontent.com/pamoroso/spacestills/master/spacestills.jpg)
 
 The program allows to correct the aspect ratio of the frames and save them. It downloads the latest frame automatically and gives the option to reload manually, disable the automatic reload, or change the download frequency.
 
-Spacestills has a GUI based on the [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/) framework. More implementation details are in a blog post that discusses the [design of Spacestills](https://blog.paoloamoroso.com/2021/04/a-nasa-tv-still-frame-viewer-in-python.html).
+Spacestills has a GUI based on the [PySimpleGUI](https://pysimplegui.readthedocs.io/en/latest/) framework and relies on the [Pillow](https://pillow.readthedocs.io) and [Requests](https://docs.python-requests.org) libraries. More implementation details are in a blog post that discusses the [design of Spacestills](https://blog.paoloamoroso.com/2021/04/a-nasa-tv-still-frame-viewer-in-python.html).
 
 
 ## Installation 
 
-Download the [release archive](https://github.com/pamoroso/spacestills/releases) from the [project's site](https://github.com/pamoroso/spacestills) and expand it. All you need is the `main.py` file, which you can copy anywhere in the file system.
+Spacestills is available on PyPI, so to install the package execute the following shell command:
+
+```
+$ pip install spacestills
+```
+
 
 ## Usage
 
@@ -24,13 +29,14 @@ You can also adjust the size of the X Window desktop pane when running Spacestil
 
 ### Running elsewhere
 
-If you use a different Python environment on Linux install [PySimpleGUI](https://pysimplegui.readthedocs.io) and the other dependencies, [Pillow](https://pillow.readthedocs.io) and [Requests](https://docs.python-requests.org). Then download `main.py` as explained above, navigate to the directory containing `main.py`, and execute the shell command:
-```bash
-$ python3 main.py
-```
-These instructions should work also on macOS. For other operating systems see the documentation of your Python environment.
+You can run Spacestills from the shell by executing the command:
 
-### Commands
+```
+$ spacestills
+```
+
+
+### Commands and options
 
 The program window displays the current NASA TV still frame and automatically reloads it every 45 seconds.
 
@@ -44,6 +50,11 @@ Click the `Save` button to save the current image to the local file system in PN
 ## Known issues
 
 Typing a file name in the save dialog without first going through the file browse dialog doesn't add the default `.png` extension.
+
+
+## Release history
+
+See the [list of releases](https://github.com/pamoroso/spacestills/releases) for notes on the changes in each version.
 
 
 ## Author
